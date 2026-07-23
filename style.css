@@ -73,58 +73,136 @@ h6 {
   --main-colour: #fff;
   --secondary-colour: #1992d4;
   --accent-colour: #f0b429;
+  --shadow: 2px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 body {
+  background-color: var(--background-colour);
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 4fr;
   height: 100vh;
 }
 
 header {
+  display: grid;
   background-color: var(--main-colour);
   grid-column: 2 / -1;
-  display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
+  box-shadow: var(--shadow);
+  position: relative;
+  gap: 25px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.search {
+  display: flex;
+}
+
+input[type="text"] {
+  background-color: var(--background-colour);
+  height: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 500px;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .sidebar {
   background: var(--secondary-colour);
   grid-row: 1 / -1;
+  color: var(--main-colour);
+  position: relative;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar li,
+.sidebar-header {
+  list-style: none;
+  gap: 15px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.sidebar-header {
+  
+  align-self: center;
+}
+
+.sidebar-header img {
+  height: 50px;
+  width: 50px;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar li:nth-child(7) {
+  margin-top: 50px;
 }
 
 main {
-  grid-column: 2 / -1;
-  background-color: var(--background-colour);
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 5px;
+  margin: 25px 15px;
+  gap: 15px;
 }
 
 .projects {
   display: grid;
   gap: 15px;
   grid-row: 1 / -1;
+  grid-column: 2fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 12px 1fr 1fr;
-  padding-top: 10px;
-  /* grid-auto-rows: ?; */
+  grid-template-rows: 40px repeat(3, 1fr);
 }
 
-.project-title {
+main h3 {
   grid-column: 1/-1;
+  align-content: end;
 }
-.project {
+
+.cards {
+  display: grid;
+  gap: 15px;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  justify-content: center;
+}
+
+.project,
+.card {
   background-color: var(--main-colour);
   border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+
+.project {
   border-left: 5px solid var(--accent-colour);
-  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 img {
   height: 20px;
   width: 20px;
 }
+
+button {
+  color: var(--main-colour);
+  border-radius: 15px;
+  background-color: var(--secondary-colour);
+  border: none;
+  padding: 5px;
+}
+
+/* put max on announcements and trending, i want always longer than width 
+max height header/ header sections
+add icons
+minmax searchbar */

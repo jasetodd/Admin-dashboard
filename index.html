@@ -7,39 +7,45 @@
     <title>Admin Dashboard</title>
   </head>
   <body>
-    <header>
-      <div class="topL">
-        <img src="Assets/magnify.svg" alt="" srcset="" />searchbar
+    <header class="header">
+      <div class="header-sections search">
+        <img src="Assets/magnify.svg" alt="" srcset="" />
+        <input type="text" name="justforshow" id="justforshow" />
       </div>
-      <div class="topR">notifications etc</div>
-      <div class="bottomL">Hi there, <span>Jason Todd</span></div>
-      <div class="bottomR">
+      <div class="header-sections">notifications etc</div>
+      <div class="header-sections">Hi there, <span>Jason Todd</span></div>
+      <div class="header-sections">
         <button>New</button>
         <button>Upload</button>
         <button>Share</button>
       </div>
     </header>
     <div class="sidebar">
-      <div class="sidebar-header">(logo)Dashboard</div>
-      <div class="sbTop">
+      <div class="sidebar-header">
+        <img
+          src="Assets/view-dashboard.svg"
+          alt="simple mosaic design"
+        />Dashboard
+      </div>
+      <div>
         <ul>
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>History</li>
-          <li>Tasks</li>
-          <li>Communities</li>
-          <li>should i make the below a different list?</li>
-          <li>Settings</li>
-          <li>Support</li>
-          <li>Privacy</li>
+          <li><img src="Assets/home.svg" alt="House icon" />Home</li>
+          <li>
+            <img src="Assets/card-account-details-outline.svg" alt="card" />Profile
+          </li>
+          <li><img src="Assets/message-reply.svg" alt="message">Messages</li>
+          <li><img src="Assets/history.svg" alt="history">History</li>
+          <li><img src="Assets/checkbox-marked-circle-auto-outline.svg" alt="tasks">Tasks</li>
+          <li><img src="Assets/account-group.svg" alt="communities">Communities</li>
+          <li><img src="Assets/cog.svg" alt="settings cog">Settings</li>
+          <li><img src="Assets/help-box.svg" alt="help">Support</li>
+          <li><img src="Assets/shield-check.svg" alt="privacy shield">Privacy</li>
         </ul>
       </div>
-      <div class="sbBottom">a second list</div>
     </div>
     <main>
       <div class="projects">
-        <div class="project-title">Projects</div>
+        <h3>Projects</h3>
         <div class="project">p1</div>
         <div class="project">p2</div>
         <div class="project">p3</div>
@@ -47,11 +53,15 @@
         <div class="project">p5</div>
         <div class="project">p6</div>
       </div>
-      <div class="announcements">
-        <div class="feed">site maintenance</div>
+      <div class="cards">
+        <h3>Announcements</h3>
+        <div class="card">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
       </div>
-      <div class="trending">
-        <div class="feed">@tegan</div>
+      <div class="cards">
+        <h3>Tending</h3>
+        <div class="card">Feed</div>
       </div>
     </main>
 
