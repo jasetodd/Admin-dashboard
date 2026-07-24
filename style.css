@@ -105,9 +105,16 @@ header {
   grid-template-rows: 1fr 1fr;
   box-shadow: var(--shadow);
   position: relative;
-  gap: 25px;
-  padding-top: 20px;
   padding-left: 15px;
+}
+.noti {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.noti img {
+  height: 2rem;
 }
 
 .greeting {
@@ -132,6 +139,12 @@ header {
 
 .search {
   display: flex;
+  align-items: center;
+}
+
+.search img {
+  height: 2rem;
+  width: auto;
 }
 
 input[type="text"] {
@@ -144,6 +157,10 @@ input[type="text"] {
   padding-left: 10px;
 }
 
+.buttons {
+  gap: 15px;
+}
+
 .sidebar {
   background: var(--secondary-colour);
   grid-row: 1 / -1;
@@ -151,8 +168,6 @@ input[type="text"] {
   position: relative;
   box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.3);
   padding: 40px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .sidebar li,
@@ -166,22 +181,26 @@ input[type="text"] {
 }
 
 .sidebar-header {
-  font-size: 50px;
-  align-self: center;
+  font-size: 3rem;
+  align-items: center;
+}
+
+.sidebar ul img {
+  filter: invert(1);
+  height: 20px;
+  width: 20px;
 }
 
 .sidebar-header img {
   height: 60px;
   width: 50px;
-}
-.sidebar img {
-  color: red;
-  
+  filter: invert(1);
 }
 
 .sidebar ul {
   padding: 0;
-  font-size: 20px;
+  font-size: 1.5rem;
+  margin-top: 55px;
 }
 
 .sidebar li:nth-child(7) {
@@ -212,7 +231,6 @@ main h3 {
 
 .cards {
   display: grid;
-  gap: 15px;
   grid-template-rows: 40px 1fr;
   grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
   justify-content: center;
@@ -223,15 +241,11 @@ main h3 {
   background-color: var(--main-colour);
   border-radius: 5px;
   box-shadow: var(--shadow);
+  padding: 5px;
 }
 
 .project {
   border-left: 5px solid var(--accent-colour);
-}
-
-img {
-  height: 20px;
-  width: 20px;
 }
 
 button {
@@ -239,11 +253,13 @@ button {
   border-radius: 15px;
   background-color: var(--secondary-colour);
   border: none;
-  padding: 5px;
   box-shadow: var(--shadow);
+  margin: 1rem;
+  padding: 0.3rem;
+  width: 85px;
 }
 
 /* put min max on announcements and trending widths
-minmax header width
-change icon colours 
-button margin bottom*/
+minmax header width 
+notification section
+space between upper and lower header sections?*/
