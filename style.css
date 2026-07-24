@@ -72,16 +72,29 @@ h6 {
   --background-colour: #e2e8f0;
   --main-colour: #fff;
   --secondary-colour: #1992d4;
-  --accent-colour: #f0b429;
+  --accent-colour: #ff7440;
   --shadow: 2px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   background-color: var(--background-colour);
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(300px, 1fr) 4fr;
   grid-template-rows: 1fr 4fr;
   height: 100vh;
+  font-size: 20px;
 }
 
 header {
@@ -93,8 +106,28 @@ header {
   box-shadow: var(--shadow);
   position: relative;
   gap: 25px;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-left: 15px;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.greeting div {
+  align-self: center;
+}
+
+.greeting span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.greeting img {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 5px;
 }
 
 .search {
@@ -106,7 +139,7 @@ input[type="text"] {
   height: 20px;
   border: none;
   border-radius: 20px;
-  width: 500px;
+  width: 50%;
   margin-left: 10px;
   padding-left: 10px;
 }
@@ -125,23 +158,30 @@ input[type="text"] {
 .sidebar li,
 .sidebar-header {
   list-style: none;
-  gap: 15px;
+  gap: 10px;
   margin-top: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar-header {
-  
+  font-size: 50px;
   align-self: center;
 }
 
 .sidebar-header img {
-  height: 50px;
+  height: 60px;
   width: 50px;
+}
+.sidebar img {
+  color: red;
+  
 }
 
 .sidebar ul {
   padding: 0;
+  font-size: 20px;
 }
 
 .sidebar li:nth-child(7) {
@@ -150,7 +190,7 @@ input[type="text"] {
 
 main {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin: 25px 15px;
   gap: 15px;
@@ -162,7 +202,7 @@ main {
   grid-row: 1 / -1;
   grid-column: 2fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px repeat(3, 1fr);
+  grid-template-rows: 35px repeat(3, 1fr);
 }
 
 main h3 {
@@ -200,9 +240,10 @@ button {
   background-color: var(--secondary-colour);
   border: none;
   padding: 5px;
+  box-shadow: var(--shadow);
 }
 
-/* put max on announcements and trending, i want always longer than width 
-max height header/ header sections
-add icons
-minmax searchbar */
+/* put min max on announcements and trending widths
+minmax header width
+change icon colours 
+button margin bottom*/
