@@ -91,7 +91,7 @@ body {
     sans-serif;
   background-color: var(--background-colour);
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) 4fr;
+  grid-template-columns: minmax(300px, 1fr) minmax(930px, 4fr);
   grid-template-rows: 1fr 4fr;
   height: 100vh;
   font-size: 20px;
@@ -115,12 +115,14 @@ header {
 
 .noti img {
   height: 2rem;
+  margin: 1rem;
 }
 
 .greeting {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
+  margin-left: 5%;
 }
 .greeting div {
   align-self: center;
@@ -152,7 +154,7 @@ input[type="text"] {
   height: 20px;
   border: none;
   border-radius: 20px;
-  width: 50%;
+  width: 75%;
   margin-left: 10px;
   padding-left: 10px;
 }
@@ -227,12 +229,13 @@ main {
 main h3 {
   grid-column: 1/-1;
   align-content: end;
+  min-width: 180px;
 }
 
 .cards {
   display: grid;
-  grid-template-rows: 40px 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 300px));
   justify-content: center;
 }
 
@@ -258,8 +261,3 @@ button {
   padding: 0.3rem;
   width: 85px;
 }
-
-/* put min max on announcements and trending widths
-minmax header width 
-notification section
-space between upper and lower header sections?*/
